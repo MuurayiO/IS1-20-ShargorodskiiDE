@@ -235,5 +235,29 @@
   <ItemGroup>
     <None Include="Resources\Гладкоствольное  оружие копия.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_empty_cart_co35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_empty_cart_co351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_empty_cart_co35 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_Wallet_re_cx9u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без имени-14.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

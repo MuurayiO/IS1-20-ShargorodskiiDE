@@ -233,6 +233,36 @@ namespace KRUS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap undraw_empty_cart_co35 {
+            get {
+                object obj = ResourceManager.GetObject("undraw_empty_cart_co35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undraw_empty_cart_co35__1_ {
+            get {
+                object obj = ResourceManager.GetObject("undraw_empty_cart_co35 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap undraw_empty_cart_co351 {
+            get {
+                object obj = ResourceManager.GetObject("undraw_empty_cart_co351", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap undraw_Sign_in_re_o58h {
             get {
                 object obj = ResourceManager.GetObject("undraw_Sign_in_re_o58h", resourceCulture);
@@ -253,6 +283,16 @@ namespace KRUS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap undraw_Wallet_re_cx9u {
+            get {
+                object obj = ResourceManager.GetObject("undraw_Wallet_re_cx9u", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Без_имени_1 {
             get {
                 object obj = ResourceManager.GetObject("Без имени-1", resourceCulture);
@@ -266,6 +306,46 @@ namespace KRUS.Properties {
         internal static System.Drawing.Bitmap Без_имени_11 {
             get {
                 object obj = ResourceManager.GetObject("Без имени-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Без_имени_12 {
+            get {
+                object obj = ResourceManager.GetObject("Без имени-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Без_имени_13 {
+            get {
+                object obj = ResourceManager.GetObject("Без имени-13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Без_имени_14 {
+            get {
+                object obj = ResourceManager.GetObject("Без имени-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Без_имени_2 {
+            get {
+                object obj = ResourceManager.GetObject("Без имени-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
