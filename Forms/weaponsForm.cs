@@ -26,5 +26,10 @@ namespace KRUS
             panel2.Tag = form;
             form.Show();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            loadForm(new gladkoWeapon());
+        }
     }
 }
