@@ -26,15 +26,5 @@ namespace KRUS
             panel2.Tag = form;
             form.Show();
         }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            loadForm(new orderForm());
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            loadForm(new walletForm());
-        }
     }
 }
