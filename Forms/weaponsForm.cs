@@ -27,9 +27,24 @@ namespace KRUS
             form.Show();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             loadForm(new gladkoWeapon());
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            loadForm(new nareznoeWeapong());
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            loadForm(new samooboronaWeapon());
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            loadForm(new pnevmat());
         }
     }
 }
