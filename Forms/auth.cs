@@ -116,7 +116,7 @@ namespace KRUS
             command.Parameters.Add("@un", MySqlDbType.VarChar, 25);
             command.Parameters.Add("@up", MySqlDbType.VarChar, 25);
             command.Parameters["@un"].Value = guna2TextBox1.Text;
-            command.Parameters["@up"].Value = sha256(guna2TextBox2.Text);
+            command.Parameters["@up"].Value = sha256(pass.Text);
             adapter.SelectCommand = command;
             adapter.Fill(table);
             conn.Close();          
@@ -130,6 +130,23 @@ namespace KRUS
             {
                 MessageBox.Show("Неверные данные авторизации!");
             }
-        }       
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {           
+            if (checkPass.Checked)
+            {
+                pass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                pass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void pass_TextChanged(object sender, EventArgs e)
+        {
+            pass.UseSystemPasswordChar = true;
+        }
     }
 }

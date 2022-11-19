@@ -16,6 +16,7 @@ namespace KRUS
         {
             InitializeComponent();
         }
+
         public void loadForm(object Form)
         {
             if (panel2.Controls.Count > 0) panel2.Controls.RemoveAt(0);
