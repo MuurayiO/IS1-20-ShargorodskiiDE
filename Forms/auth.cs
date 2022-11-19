@@ -25,19 +25,31 @@ namespace KRUS
         }
 
         string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_31;database=is_1_20_st31_KURS;password=14639122;";
-        MySqlConnection conn;
-
-        
+        MySqlConnection conn;      
 
         private void auth_Load(object sender, EventArgs e)
         {            
             conn = new MySqlConnection(connStr);
             Region = new Region(kraya.RoundedRect(new Rectangle(0, 0, Width, Height), 20));
         }
-
-        /////////////////////////////////////////////////////
-        
+        //
         // События
+        //
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkPass.Checked)
+            {
+                pass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                pass.UseSystemPasswordChar = true;
+            }
+        }
+        private void pass_TextChanged(object sender, EventArgs e)
+        {
+            pass.UseSystemPasswordChar = true;
+        }
 
         private void auth_KeyDown(object sender, KeyEventArgs e)
         {
@@ -74,10 +86,9 @@ namespace KRUS
         {
             lastPoint = new Point(e.X, e.Y);
         }
-
-        /////////////////////////////////////////////////////       
-
-
+        //     
+        // Авторизация
+        //
         static string sha256(string randomString)
         {
             var crypt = new System.Security.Cryptography.SHA256Managed();
@@ -130,23 +141,6 @@ namespace KRUS
             {
                 MessageBox.Show("Неверные данные авторизации!");
             }
-        }
-
-        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {           
-            if (checkPass.Checked)
-            {
-                pass.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                pass.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void pass_TextChanged(object sender, EventArgs e)
-        {
-            pass.UseSystemPasswordChar = true;
-        }
+        }        
     }
 }
