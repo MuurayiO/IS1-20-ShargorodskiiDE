@@ -24,7 +24,7 @@ namespace KRUS
             StartPosition = FormStartPosition.CenterScreen;           
         }
 
-        string connStr = "server=chuc.caseum.ru;port=33333;user=st_1_20_31;database=is_1_20_st31_KURS;password=14639122;";
+        string connStr = "server=10.90.12.110;port=33333;user=st_1_20_31;database=is_1_20_st31_KURS;password=14639122;";
         MySqlConnection conn;      
 
         private void auth_Load(object sender, EventArgs e)
