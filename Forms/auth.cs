@@ -142,10 +142,8 @@ namespace KRUS
                 MessageBox.Show("Неверные данные авторизации!");
             }
         }
-
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Hide();
             Register reg = new Register();           
             reg.ShowDialog();
         }
