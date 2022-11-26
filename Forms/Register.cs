@@ -29,10 +29,20 @@ namespace KRUS
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `login_password` (`id_login_password`, `login`, `password`) VALUES ('2', @login, @password);", conn);
+        {       
+            /*
+            MySqlCommand command1 = new MySqlCommand("INSERT INTO `T_clients` (`id_сlient`, `fio`, `phone`) VALUES (NULL, @fio, @phone);", conn);
+            command1.Parameters.Add("@fio", MySqlDbType.VarChar).Value = fio.Text;
+            command1.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone.Text;
+            */
+
+            MySqlCommand command = new MySqlCommand("INSERT INTO `login_password` (`id_login_password`, `login`, `password`, `fio`, `phone`) VALUES (NULL, @login, @password, @fio, @phone);", conn);
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = user.Text;
             command.Parameters.Add("@password", MySqlDbType.VarChar).Value = pass.Text;
+            command.Parameters.Add("@fio", MySqlDbType.VarChar).Value = fio.Text;
+            command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone.Text;
+
+
             conn.Open();
             if (command.ExecuteNonQuery() == 1)
             {
@@ -43,7 +53,6 @@ namespace KRUS
                 MessageBox.Show("NE KRUTO");
             }
             conn.Close();
-
-        }      
+        }
     }
 }
