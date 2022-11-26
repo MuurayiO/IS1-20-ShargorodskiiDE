@@ -25,10 +25,10 @@ namespace KRUS
         }
 
         string connStr = "server=10.90.12.110;port=33333;user=st_1_20_31;database=is_1_20_st31_KURS;password=14639122;";
-        MySqlConnection conn;      
+        MySqlConnection conn;
 
         private void auth_Load(object sender, EventArgs e)
-        {            
+        {
             conn = new MySqlConnection(connStr);
             Region = new Region(kraya.RoundedRect(new Rectangle(0, 0, Width, Height), 20));
         }
@@ -141,6 +141,13 @@ namespace KRUS
             {
                 MessageBox.Show("Неверные данные авторизации!");
             }
-        }        
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Register reg = new Register();           
+            reg.ShowDialog();
+        }
     }
 }
