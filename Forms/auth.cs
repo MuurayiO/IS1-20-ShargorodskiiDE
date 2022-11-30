@@ -119,7 +119,7 @@ namespace KRUS
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT * FROM login_password WHERE login = @un and  password= @up";
+            string sql = "SELECT * FROM login_password WHERE login = @un";
             conn.Open();
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();

@@ -29,7 +29,18 @@ namespace KRUS
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
-        {       
+        {
+            if (fio.Text == "" || phone.Text == "" || user.Text == "" || pass.Text == "")
+            {
+                MessageBox.Show("Введите данные");
+                return;
+            }
+
+            if (checkUser())
+            {
+                return;
+            }
+
             MySqlCommand command = new MySqlCommand("INSERT INTO `login_password` (`id_login_password`, `login`, `password`, `fio`, `phone`) " +
                 "VALUES (NULL, @login, @password, @fio, @phone);", conn);
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = user.Text;
@@ -48,9 +59,29 @@ namespace KRUS
             }
             else
             {
-                MessageBox.Show("NE KRUTO");
+                MessageBox.Show("Пользователь не зарегистрирован");
             }
             conn.Close();
+        }
+
+        public Boolean checkUser()
+        {
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM login_password WHERE login = @un", conn);
+            command.Parameters.Add("@un", MySqlDbType.VarChar).Value = user.Text;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Такой логин уже существует");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
     }
 }
