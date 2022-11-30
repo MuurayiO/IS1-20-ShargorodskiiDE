@@ -96,6 +96,7 @@ namespace KRUS
             this.checkPass.UncheckedState.BorderRadius = 4;
             this.checkPass.UncheckedState.BorderThickness = 0;
             this.checkPass.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(99)))), ((int)(((byte)(255)))));
+            this.checkPass.CheckedChanged += new System.EventHandler(this.checkPass_CheckedChanged);
             // 
             // label2
             // 
@@ -118,7 +119,7 @@ namespace KRUS
             this.pass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.pass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.pass.Font = new System.Drawing.Font("Mont Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pass.Font = new System.Drawing.Font("Mont Bold", 9F, System.Drawing.FontStyle.Bold);
             this.pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.pass.Location = new System.Drawing.Point(24, 486);
             this.pass.Name = "pass";
@@ -128,6 +129,7 @@ namespace KRUS
             this.pass.Size = new System.Drawing.Size(351, 36);
             this.pass.TabIndex = 18;
             this.pass.Tag = "";
+            this.pass.TextChanged += new System.EventHandler(this.pass_TextChanged);
             // 
             // user
             // 
@@ -140,7 +142,7 @@ namespace KRUS
             this.user.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.user.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.user.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.user.Font = new System.Drawing.Font("Mont Bold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.user.Font = new System.Drawing.Font("Mont Bold", 9F, System.Drawing.FontStyle.Bold);
             this.user.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.user.Location = new System.Drawing.Point(24, 409);
             this.user.Name = "user";

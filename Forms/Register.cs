@@ -27,39 +27,60 @@ namespace KRUS
             conn = new MySqlConnection(connStr);
             Region = new Region(kraya.RoundedRect(new Rectangle(0, 0, Width, Height), 20));
         }
+        private void pass_TextChanged(object sender, EventArgs e)
+        {
+            pass.UseSystemPasswordChar = true;
+        }
+
+        private void checkPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkPass.Checked)
+            {
+                pass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                pass.UseSystemPasswordChar = true;
+            }
+        }
+
+        static string sha256(string randomString)
+        {
+            var crypt = new System.Security.Cryptography.SHA256Managed();
+            var hash = new System.Text.StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(randomString));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            return hash.ToString();
+        }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (fio.Text == "" || phone.Text == "" || user.Text == "" || pass.Text == "")
+            if (checkUser())
             {
-                MessageBox.Show("Введите данные");
                 return;
             }
 
-            if (checkUser())
+            if (fio.Text == "" || phone.Text == "" || user.Text == "" || pass.Text == "")
             {
+                MessageBox.Show("Введите пустые поля");
                 return;
             }
 
             MySqlCommand command = new MySqlCommand("INSERT INTO `login_password` (`id_login_password`, `login`, `password`, `fio`, `phone`) " +
                 "VALUES (NULL, @login, @password, @fio, @phone);", conn);
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = user.Text;
-            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = pass.Text;
+            command.Parameters.Add("@password", MySqlDbType.VarChar).Value = sha256(pass.Text);
             command.Parameters.Add("@fio", MySqlDbType.VarChar).Value = fio.Text;
             command.Parameters.Add("@phone", MySqlDbType.VarChar).Value = phone.Text;
-
 
             conn.Open();
             if (command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Пользователь зарегистрирован");
-                auth Auth = new auth();
-                Auth.Show();
+                MessageBox.Show("Пользователь зарегистрирован");               
                 Close();                
-            }
-            else
-            {
-                MessageBox.Show("Пользователь не зарегистрирован");
             }
             conn.Close();
         }
@@ -82,6 +103,6 @@ namespace KRUS
                 return false;
             }
 
-        }
+        }       
     }
 }
